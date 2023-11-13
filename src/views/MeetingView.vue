@@ -2,8 +2,8 @@
     <div class="view-container">
         <div>
             <h3>Schedule a Meeting</h3>
-            <p>If you would like to schedule a meeting with us, feel free to do so.</p>
-            <p>We can talk about textiles, sewing, design, salsa dancing, rollerskaing or anything else you are into.</p>
+            <p>If you would like to schedule a meeting with me, feel free to do so.</p>
+            <p>We can talk about textiles, sewing, design, salsa dancing, rollerskaing or anything else you are into. I value randomness.</p>
         </div>
         <iframe
             id="meeting-scheduler"
