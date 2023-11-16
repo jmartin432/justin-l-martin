@@ -7,7 +7,7 @@
         <div>
             <h3>Get In Touch</h3>
             <p>
-                Send us a message with the contact form below.
+                Send me a message with the contact form below.
             </p>
         </div>
         <ContactForm />

@@ -26,6 +26,13 @@ p {
     padding: 0 1rem;
 }
 
+a {
+    font-family: Alegreya;
+    font-size: 1.25rem;
+    color: #75CBD1;
+    text-decoration: none;
+}
+
 .view-container {
     padding: 30px;
     /* border: 1px solid red; */

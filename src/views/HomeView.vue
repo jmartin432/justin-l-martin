@@ -2,10 +2,11 @@
     <div>
         <h3>Welcome</h3>
         <p>
-            I am a freelance JavaScript developer, volunteer coordinator, designer (textile and clothing) based in Portland, Oregon. 
+            I am a freelance JavaScript developer, designer (textiles and clothing) and volunteer coordinator based in Portland, Oregon. 
         </p>
         <p>
-            I like salsa dancing, rollerskating and juggling. 
+            I am the owner of <a href="https://backandforthdesigns.com" target="_blank">Back and Forth: Desings and Dry Goods</a>, 
+            a textile and design studio located under the Morrison Bridge.
         </p>
         <p>
             I value adventure, play, creativity, autonomy and randomness. 
