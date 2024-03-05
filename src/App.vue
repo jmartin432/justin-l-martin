@@ -5,20 +5,20 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
     <header>
         <div class="title-container">
-            <div class="title-image-container">
+            <!-- <div class="title-image-container">
               <img alt="Justin L. Martin Logo" class="logo title-image" src="@/assets/images/logo.svg" width="125" height="125" />
-            </div>
+            </div> -->
             <div class="title-text-container">
                 <h1>Justin L. Martin</h1>
-                <h2>JavaScript Developer</h2>
+                <h2>Thank You for Dropping By</h2>
             </div>
         </div>
-            <nav>
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/contact">Contact</RouterLink>
-                <RouterLink to="/meeting">Meet</RouterLink>
-                <!-- <RouterLink to="/about">About</RouterLink> -->
-            </nav>
+        <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
+            <!-- <RouterLink to="/about">About</RouterLink> -->
+        </nav>
     </header>
 
     <RouterView class="view-container"/>
@@ -30,7 +30,7 @@ import { RouterLink, RouterView } from 'vue-router'
                     <img class="social-icon" src="@/assets/images/github_mark.svg" alt="GitHub Logo" />
                 </a>
             </div>
-            <div class="social-icon-container">
+            <!-- <div class="social-icon-container">
                 <a href="https://www.linkedin.com/in/justinleemartin" target="_blamk">
                     <img class="social-icon" src="@/assets/images/linkedin_mark.svg" alt="Linkedin Logo" />
                 </a>
@@ -39,7 +39,7 @@ import { RouterLink, RouterView } from 'vue-router'
                 <a href="https://www.instagram.com/backandforthdesigns/" target="_blank">
                     <img class="social-icon" src="@/assets/images/instagram_mark.svg" href="" alt="Instagram Logo"/>
                 </a>
-            </div>
+            </div> -->
         </div>
         <div id="footer-message">
             <!-- <img src = "assets/images/bnf.svg" alt="Back and Forth Logo"/> -->
@@ -58,81 +58,59 @@ header {
   width: 100%;
   justify-content: center;
   margin-bottom: 1rem;
+  border-bottom: 1px solid #EBC58A
 }
 
 .title-container {
     width: 100%;
-    display: flex;
+    /* display: flex; */
     margin: 0 auto;
     justify-content: center;
     margin-bottom: 1rem;
 }
 
-.title-image-container {
-  align-self: center;
-  padding: 0 1rem;
-}
-
-.title-image {
-}
-
 .title-text-container {
   align-self: center;
+  text-align: center;
   padding: 0 1rem;
 }
 
 h1 {
+    display: none;
     font-size: 4rem;
-    color: #D175CB;
+    color: #EB938A;
     font-family: Oswald;
     font-weight: 700;
-    /* text-shadow: 2px 2px 5px #D175CB88; */
     margin: 0;
 }
 
 h2 {
     font-size: 3rem;
-    color: #75CBD1;
+    color: #EB8AA6;
     font-family: Poppins;
     font-weight: 400;
     margin: 0;
 }
 
 nav {
+    display: none;
     width: 100%;
     font-size: 1rem;
     text-align: center;
     margin: auto;
-    padding: 1rem 0;
-    border-top: 1px solid #CBD175
+    padding: .5rem 0;
+    border-top: 1px solid #EBC58A
 }
 
 nav a {
-    color: #D175CB;
+    color: #EB938A;
     text-decoration: none;
     display: inline-block;
-    padding: 0 1rem;
-    border-left: 1px solid #CBD175;
+    padding: .25rem 1rem;
+    /* border-left: 1px solid #ffffff; */
     font-family: "Open Sans";
     font-weight: 500;
-}
-
-nav a:hover {
-    background-color: #777;
-}
-
-nav a.router-link-exact-active {
-    color: #D175CB88;
-    cursor: default;
-    text-decoration: none;
-}
-
-nav a.router-link-exact-active:hover {
-    background-color: transparent;
-}
-
-nav a:first-of-type {
-    border: 0;
+    transition: .3s ease;
 }
 
 footer {
@@ -140,9 +118,9 @@ footer {
     font-family: "Poppins", sans-serif;
     width: 100%;
     padding: 2rem 0;
-    color: #D175CB;
+    color: #EB8AA6;
     transition-duration: .75s;
-    border-top: 1px solid #CBD175;
+    border-top: 1px solid #EBC58A;
     margin-top: 2rem;
 }
 
@@ -156,6 +134,7 @@ footer {
 }
 
 .social-icon-container{
+    display: none;
     padding: 1rem 2rem;
 }
 

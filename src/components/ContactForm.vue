@@ -1,19 +1,5 @@
 <template>
     <div>
-        <Transition name="submit-message">
-            <template v-if="showSubmitMessage">
-                <div id="submit-message-container">
-                    <div id="submit-message-text-container">
-                        <p v-html="submitMessage" id="submit-message-text"></p>
-                    </div>
-                    <div id="submit-message-button-container" v-show="showSubmitMessage">
-                        <button id="close-submit-message" @click=closeSubmitMessage v-show="showSubmitMessage">X</button>
-                    </div>
-                </div>
-            </template>
-        </Transition>
-
-
         <form id="contact-form" method="post">
             <div class="input-label">
                 <label for="name-input">Name<span>{{ nameWarning }}</span></label>
@@ -52,6 +38,18 @@
             <!-- <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div> -->
             <button type="button" id="contact-form-submit" @click=submitForm>Submit</button>
         </form>
+        <Transition name="submit-message">
+            <template v-if="showSubmitMessage">
+                <div id="submit-message-container">
+                    <div id="submit-message-text-container">
+                        <p v-html="submitMessage" id="submit-message-text"></p>
+                    </div>
+                    <div id="submit-message-button-container" v-show="showSubmitMessage">
+                        <button id="close-submit-message" @click=closeSubmitMessage v-show="showSubmitMessage">X</button>
+                    </div>
+                </div>
+            </template>
+        </Transition>
     </div>
 </template>
 <script>
@@ -141,13 +139,108 @@
 
 <style>
 
+label {
+    color: #EAA48A;
+    margin: 0 0 .5rem 0;
+    display: block;
+    font-size: 1.25rem;
+}
+
+input, select, textarea {
+    padding: .25rem;
+    font-size: 1rem;
+    border: 2px solid #EAA48A;
+    border-radius: 4px;
+    font-family: Alegreya;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+}
+
+input:focus, select:focus, textarea:focus {
+    transition-duration: 0.4s;
+    box-shadow:
+        5px 5px 10px #EBB58Add,
+        -5px -5px 10px #EBB58Add,
+        -5px 5px 10px #EBB58Add,
+        5px -5px 10px #EBB58Add;
+}
+
+.form-container {
+    width: 80%;
+    margin: auto;
+    padding: 2.5rem;
+}
+
+@media (max-width: 600px) {  
+    .form-container {
+        width: 90%;
+        padding: 1rem;
+    }
+}
+
+.form-item {
+    margin-top: 1.25rem;
+}
+
+.form-item input, .form-item select {
+    width: 30%;
+}
+
+@media (max-width: 600px) {  
+    .form-item input, .form-item select {
+        width: 60%;
+    }
+}
+
+.form-item textarea {
+    width: 60%;
+}
+
+@media (max-width: 600px) {  
+    .form-item textarea {
+        width: 80%;
+    }
+}
+
+.nobueno{
+    height: 0;
+    width: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+button {
+    background-color: #333;
+    border: 2px solid #EAA48A;
+    border-radius: 4px;
+    color: #EAA48A;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    transition-duration: 0.4s;
+    font-family: 'Open sans';
+    font-size: 1rem;
+}
+
+button:hover {
+    box-shadow:
+        5px 5px 10px #EBB58Add,
+        -5px -5px 10px #EBB58Add,
+        -5px 5px 10px #EBB58Add,
+        5px -5px 10px #EBB58Add;
+    cursor: pointer;
+}
+
 #submit-message-container {
-    border: 2px solid #AC68A7;
+    border: 2px solid #EAA48A;
     border-radius: 4px;
     height: auto;
     overflow: hidden;
     display: flex;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .submit-message-enter-active {
@@ -185,35 +278,12 @@ a {
     color: #75CBD1;
 }
 
-label {
-    color: #75CBD1;
-    margin-bottom: .25rem;
-    font-family: "Open Sans";
-    font-size: 1rem;
-}
-
 label span {
     color: #AC6868;
 }
 
 input, label {
     display: block;
-}
-
-input, textarea {
-    padding: 10px 3px;
-    border: 2px solid #AC68A7;
-    border-radius: 4px;
-    background-color: #D2C8D2;
-    font-family: Alegreya;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border: 3px solid #AC68A7;
-    border-radius: 4px;
 }
 
 input {
