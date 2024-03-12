@@ -11,7 +11,9 @@
             I own and operate <a href="https://backandforthdesigns.com" target="_blank">Back and Forth: Designs and Dry Goods</a> and 
             am currently a part of the <a href="https://bridgeratstudios.com" target="_blank">Bridge Rat Studios</a> collective located under the Morrison Bridge. 
         </p>
-        <p>I am also a freelance JavaScript and web application developer.</p>
+        <p>
+            I am also a freelance JavaScript and web application developer.
+        </p>
         </section>
         <section class="contact-form-section">
             <h3>Contact</h3>
