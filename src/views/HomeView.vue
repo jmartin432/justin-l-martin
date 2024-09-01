@@ -5,20 +5,9 @@
 <template>
     <div class="view-container">
         <section class="welcome-section">
-        <h3>Welcome</h3>
-        <p>
-            I am a textile artist, sewist and community organizer based in Portland, Oregon. 
-            I own and operate <a href="https://backandforthdesigns.com" target="_blank">Back and Forth: Designs and Dry Goods</a> and 
-            am currently a part of the <a href="https://bridgeratstudios.com" target="_blank">Bridge Rat Studios</a> collective located under the Morrison Bridge. 
-        </p>
-        <p>
-            I am also a freelance JavaScript and web application developer.
-        </p>
-        </section>
-        <section class="contact-form-section">
-            <h3>Contact</h3>
+            <h3>Hi</h3>
             <p>
-                Send me a message with the contact form below.
+                Thank you for dropping by. If you would like to get in touch please use the contact fomr below.
             </p>
             <ContactForm />
         </section>

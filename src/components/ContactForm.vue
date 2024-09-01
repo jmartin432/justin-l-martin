@@ -114,19 +114,19 @@
                     this.showSubmitMessage = true;
                     if (responseBody.statusCode === 200) {
                         console.log('SUCCESS');
-                        this.submitMessage = 'Your message was successfully submitted. Thank you, we will be in touch.'
+                        this.submitMessage = 'Your message was successfully submitted. Thank you, I\'ll be in touch.'
                         setTimeout(() => { this.resetForm(); }, 5000);
                     } else {
                         console.error(responseBody);
                         this.submitMessage = `There was a problem submitting your message. 
-                            Please send us an email at <a href="mailto: info@backandforthdesigns.com" target="_blank">info@backandforthdesigns.com</a>`
+                            Please send me an email at <a href="mailto:info@justinlmartin.com" target="_blank">info@justinlmartin.com</a>`
                     }
                 })
                 .catch((error) => {
                     console.error(error);
                     this.showSubmitMessage = true;
                     this.submitMessage = `There was a problem submitting your message. 
-                        Please send us an email at <a href="mailto: info@backandforthdesigns.com" target="_blank">info@backandforthdesigns.com</a>`
+                        Please send me an email at <a href="mailto:info@justinlmartin.com" target="_blank">info@justinlmartin.com</a>`
                 });
             },
 
