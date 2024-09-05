@@ -119,7 +119,7 @@
                     } else {
                         console.error(responseBody);
                         this.submitMessage = `There was a problem submitting your message. 
-                            Please send me an  email at <a href="mailto:info@justinlmartin.com" target="_blank">info@justinlmartin.com</a>`
+                            Please send me an email at <a href="mailto:info@justinlmartin.com" target="_blank">info@justinlmartin.com</a>`
                     }
                 })
                 .catch((error) => {
