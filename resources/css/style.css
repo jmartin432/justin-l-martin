@@ -14,7 +14,7 @@ body {
   
     height: calc(2 * var(--radius));
     aspect-ratio: 1;
-    clip-path: circle();
+    /* clip-path: circle(); */
     display: flex;
     position: absolute;
     top: var(--top);
