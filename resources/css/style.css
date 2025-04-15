@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-    background-color: #75cbd1;
+    background-color: grey;
     margin: 0;
 }
 
@@ -23,23 +23,44 @@ body {
     position: relative;
     top: var(--top);
     left: var(--left);
-  }
-  #swirl:before,
-  #swirl:after {
+}
+
+/* https://css-tricks.com/radial-gradient-recipes/ */
+
+@property --rotation {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: -60deg;
+}
+
+#swirl:before, #swirl:after {
     content: "";
     flex: 1;
-    --gradient1: radial-gradient(50% 50%, var(--color1) 99%, #0000) no-repeat;
-    --gradient2: radial-gradient(50% 50%, var(--color2) 99%, #0000) no-repeat;
-    background: var(--gradient1) calc(sin(60deg) * var(--radius)) calc(var(--radius) / -2),
+    --gradient1: radial-gradient(50% 50%, var(--color1) 99%, #fff0) no-repeat;
+    --gradient2: radial-gradient(50% 50%, var(--color2) 99%, #fff0) no-repeat;
+    background: 
+        var(--gradient1) calc(-1 * var(--radius) * sin(var(--rotation))) calc(var(--radius) * cos(var(--rotation))),
+        var(--gradient2) calc(-1 * var(--radius) * sin(-30deg)) calc(var(--radius) * cos(-30deg)),
+        var(--gradient1) calc(-1 * var(--radius) * sin(0deg)) calc(var(--radius) * cos(0deg)),
+        var(--gradient2) calc(-1 * var(--radius) * sin(30deg)) calc(var(--radius) * cos(30deg)),
+        var(--gradient1) calc(-1 * var(--radius) * sin(60deg)) calc(var(--radius) * cos(60deg)),
+        var(--gradient2) calc(-1 * var(--radius) * sin(90deg)) calc(var(--radius) * cos(90deg)),
+        var(--gradient1) calc(-1 * var(--radius) * sin(120deg)) calc(var(--radius) * cos(120deg));
+        /* var(--gradient2) calc(-1 * var(--radius) * sin(150deg)) calc(var(--radius) * cos(150deg)); */
+        
+
+        /* var(--gradient1) 0 calc(-1 * var(--radius)); */
+        /* var(--gradient2) var(--radius) 0; */
+        /* var(--gradient1) calc(sin(60deg) * var(--radius)) calc(var(--radius) / -2),
         var(--gradient2) calc(var(--radius) / 2) calc(sin(-60deg) * var(--radius)),
         var(--gradient1) 0 calc(-1 * var(--radius)), 
         var(--gradient2) calc(var(--radius) / -2) calc(sin(-60deg) * var(--radius)), 
         var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / -2), 
         var(--gradient2) calc(-1 * var(--radius)) 0, 
-        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / 2);
+        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / 2); */
     background-size: 200%;
-  }
+}
 
-  #swirl:after {
+#swirl:after {
      rotate: 180deg;
-  }
+}
