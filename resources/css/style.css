@@ -1,28 +1,41 @@
-/* HTML: <div class="lollipop"></div> */
+/* HTML: <div class="swirl"></div> */
 body {
-    background-color: aquamarine;
+    background-color: #75cbd1;
+    margin: 0;
+    overflow: hidden;
 }
 
-.lollipop {
-    --r: 150px; /* control the size */
-    --c1: #fd99d7;
-    --c2: #4e4cb0;
+#swirl {
+    top: 0px;
+    left: 0px;
+    --radius: 150px;
+    --color1: #75cbd1;
+    --color2: #d175cb;
   
-    margin: auto;
-    height: calc(2* var(--r));
+    height: calc(2 * var(--radius));
     aspect-ratio: 1;
     clip-path: circle();
     display: flex;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
   }
-  .lollipop:before,
-  .lollipop:after {
+  #swirl:before,
+  #swirl:after {
     content: "";
     flex: 1;
-    --g1:radial-gradient(50% 50%,var(--c1) 99%,#0000) no-repeat;
-    --g2:radial-gradient(50% 50%,var(--c2) 99%,#0000) no-repeat;
-    background: var(--g1) calc(sin(60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(var(--r) / 2) calc(sin(-60deg)* var(--r)), var(--g1) 0 calc(-1* var(--r)), var(--g2) calc(var(--r) / -2) calc(sin(-60deg)* var(--r)), var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / -2), var(--g2) calc(-1* var(--r)) 0, var(--g1) calc(sin(-60deg)* var(--r)) calc(var(--r) / 2);
+    --gradient1: radial-gradient(50% 50%, var(--color1) 99%, #0000) no-repeat;
+    --gradient2: radial-gradient(50% 50%, var(--color2) 99%, #0000) no-repeat;
+    background: var(--gradient1) calc(sin(60deg) * var(--radius)) calc(var(--radius) / -2),
+        var(--gradient2) calc(var(--radius) / 2) calc(sin(-60deg) * var(--radius)),
+        var(--gradient1) 0 calc(-1 * var(--radius)), 
+        var(--gradient2) calc(var(--radius) / -2) calc(sin(-60deg) * var(--radius)), 
+        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / -2), 
+        var(--gradient2) calc(-1 * var(--radius)) 0, 
+        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / 2);
     background-size: 200%;
   }
-  .lollipop:after {
+
+  #swirl:after {
      rotate: 180deg;
   }
