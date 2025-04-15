@@ -1,8 +1,12 @@
 /* HTML: <div class="swirl"></div> */
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 body {
     background-color: #75cbd1;
     margin: 0;
-    overflow: hidden;
 }
 
 #swirl {
@@ -16,7 +20,7 @@ body {
     aspect-ratio: 1;
     /* clip-path: circle(); */
     display: flex;
-    position: absolute;
+    position: relative;
     top: var(--top);
     left: var(--left);
   }
