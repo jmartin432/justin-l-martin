@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-    background-color: grey;
+    background-color: #000;
     margin: 0;
 }
 
@@ -21,7 +21,7 @@ body {
     aspect-ratio: 1;
     /* clip-path: circle(); */
     display: flex;
-    position: relative;
+    position: absolute;
     top: var(--top);
     left: var(--left);
 }
@@ -49,8 +49,8 @@ body {
 #swirl:before, #swirl:after {
     content: "";
     flex: 1;
-    --gradient1: radial-gradient(50% 50%, var(--color1) 99%, #fff0) no-repeat;
-    --gradient2: radial-gradient(50% 50%, var(--color2) 99%, #fff0) no-repeat;
+    --gradient1: radial-gradient(50% 50%, var(--color1) 97%, #000 98%, #0000 99%) no-repeat;
+    --gradient2: radial-gradient(50% 50%, var(--color2) 97%, #000 98%, #0000 99%) no-repeat;
     --extraRotation: calc(clamp(30deg, var(--rotation), 60deg) - 30deg); /* calculate */
     background: 
         var(--gradient2) calc(var(--radius) * cos(var(--extraRotation))) calc(var(--radius) * sin(var(--extraRotation))),
