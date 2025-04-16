@@ -10,11 +10,12 @@ body {
 }
 
 #swirl {
-    top: 0px;
-    left: 0px;
+    --top: 0px;
+    --left: 0px;
     --radius: 150px;
     --color1: #75cbd1;
     --color2: #d175cb;
+    --speed: 2s;
     /* --rotation: -60deg; */
   
     height: calc(2 * var(--radius));
@@ -24,6 +25,21 @@ body {
     position: absolute;
     top: var(--top);
     left: var(--left);
+}
+
+#swirl-overlay {
+    /* visibility: hidden; */
+    --top: 0px;
+    --left: 0px;
+    --radius: 150px;
+  
+    height: calc(2 * var(--radius));
+    aspect-ratio: 1;
+    z-index: 10;
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    background: radial-gradient(50% 50%, #000f 0%, #000a 10%, #0007 30%, #0000 100%);
 }
 
 /* https://css-tricks.com/radial-gradient-recipes/ */
@@ -65,7 +81,7 @@ body {
         /* var(--gradient1) calc(var(--radius) * cos(var(--rotation) + 240deg)) calc(var(--radius) * sin(var(--rotation) + 240deg)), */
         /* var(--gradient2) calc(var(--radius) * cos(var(--rotation) + 270deg)) calc(var(--radius) * sin(var(--rotation) + 270deg)); */
     background-size: 200%;
-    animation: rotateSwirl 3s linear 0s infinite normal;
+    animation: rotateSwirl var(--speed) linear 0s infinite normal;
 }
 
 #swirl:after {
