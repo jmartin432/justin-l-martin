@@ -22,13 +22,13 @@ body {
     aspect-ratio: 1;
     /* clip-path: circle(); */
     display: flex;
-    position: absolute;
+    position: relative;
     top: var(--top);
     left: var(--left);
 }
 
 #swirl-overlay {
-    /* visibility: hidden; */
+    visibility: hidden;
     --top: 0px;
     --left: 0px;
     --radius: 150px;
@@ -36,7 +36,7 @@ body {
     height: calc(2 * var(--radius));
     aspect-ratio: 1;
     z-index: 10;
-    position: absolute;
+    position: relative;
     top: var(--top);
     left: var(--left);
     background: radial-gradient(50% 50%, #000f 0%, #000a 10%, #0007 30%, #0000 100%);
