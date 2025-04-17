@@ -39,7 +39,6 @@ body {
     --top: 0px;
     --left: 0px;
     --radius: 150px;
-  
     height: calc(2 * var(--radius));
     aspect-ratio: 1;
     z-index: 10;
