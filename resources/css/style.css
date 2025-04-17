@@ -9,22 +9,29 @@ body {
     margin: 0;
 }
 
-#swirl {
+#swirl-container{
+    position: relative;
     --top: 0px;
     --left: 0px;
     --radius: 150px;
+    height: calc(2 * var(--radius));
+    aspect-ratio: 1;
+    top: var(--top);
+    left: var(--left);
+}
+
+#swirl {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     --color1: #75cbd1;
     --color2: #d175cb;
     --speed: 2s;
-    /* --rotation: -60deg; */
-  
-    height: calc(2 * var(--radius));
     aspect-ratio: 1;
-    /* clip-path: circle(); */
     display: flex;
-    position: relative;
-    top: var(--top);
-    left: var(--left);
+    position: absolute;
+    
 }
 
 #swirl-overlay {
@@ -87,13 +94,3 @@ body {
 #swirl:after {
      rotate: 180deg;
 }
-
-/* var(--gradient1) 0 calc(-1 * var(--radius)); */
-        /* var(--gradient2) var(--radius) 0; */
-        /* var(--gradient1) calc(sin(60deg) * var(--radius)) calc(var(--radius) / -2),
-        var(--gradient2) calc(var(--radius) / 2) calc(sin(-60deg) * var(--radius)),
-        var(--gradient1) 0 calc(-1 * var(--radius)), 
-        var(--gradient2) calc(var(--radius) / -2) calc(sin(-60deg) * var(--radius)), 
-        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / -2), 
-        var(--gradient2) calc(-1 * var(--radius)) 0, 
-        var(--gradient1) calc(sin(-60deg) * var(--radius)) calc(var(--radius) / 2); */
