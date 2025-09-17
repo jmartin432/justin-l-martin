@@ -1,6 +1,18 @@
 window.addEventListener('resize', function() {
+    //setSwirlSpeed();
     setDimension();
 });
+
+function setSwirlSpeed() {
+    const innerHeight = window.innerHeight;
+    const innerWidth = window.innerWidth;
+    const hypotenuse = Math.sqrt(innerHeight * innerHeight + innerWidth * innerWidth)
+    const speed = (hypotenuse / 1000).toFixed(2) + 's';
+    console.log(hypotenuse, speed);
+    const swirl = document.getElementById('swirl');
+    swirl.style.setProperty('--speed', speed)
+
+}
 
 function setDimension() {
     const innerHeight = window.innerHeight;
@@ -18,4 +30,5 @@ function setDimension() {
     swirlOverlay.style.setProperty('--top', top + 'px');
 }
 
+//setSwirlSpeed();
 setDimension(); 

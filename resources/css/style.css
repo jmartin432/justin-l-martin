@@ -1,4 +1,8 @@
 /* HTML: <div class="swirl"></div> */
+:root {
+    --animation-speed: 0s; /* Define a variable for animation duration */
+}
+
 body, html {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -27,7 +31,8 @@ body {
     left: 0;
     --color1: #75cbd1;
     --color2: #d175cb;
-    --speed: 2s;
+    /* --speed: 0s; */
+    --speed: 1s;
     aspect-ratio: 1;
     display: flex;
     position: absolute;
